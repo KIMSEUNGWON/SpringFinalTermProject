@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>제품 입고 완료</title>
+</head>
+<body>
+<h1>제품 입고 완료</h1>
+<h2>제품 입고 정보 출력</h2>
+
+<p>
+    입고 아이디: <span th:text="${stockDto.id}"></span><br/>
+    입고 제품 수량: <span th:text="${stockDto.stockQuantity}"></span><br/>
+    제품 입고 날짜: <span th:text="${stockDto.stockDateTime}"></span><br/>
+    입고 제폼 코드: <span th:text="${stockDto.productCode}"></span><br/>
+    입고 제폼 아이디: <span th:text="${stockDto.productId}"></span><br/>
+    입고한 직원 아이디: <span th:text="${stockDto.userId}"></span><br/>
+    입고한 제품 이름: <span th:text="${stockDto.productName}"></span><br/>
+    입고한 직원 이름: <span th:text="${stockDto.userName}"></span><br/>
+</p>
+
+<button onclick="location.href='/'">go home</button>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>제품 매출액 조회 완료</title>
+</head>
+<body>
+<h1 th:text="|${duration} 제품 매출액 조회 완료|">제품 매출액 조회 완료</h1>
+<h2 th:text="|${duration} 매출액 조회|">매출액 조회</h2>
+
+<ul>
+    <li>
+        매출액: 총 <span th:text="${income}" />원<br/>
+    </li>
+</ul>
+
+<button onclick="location.href='/'">go home</button>
+
+<button onclick="location.href='/stat'">go stat page</button>
+</body>
+</html>

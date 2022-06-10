@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>로그인 폼</title>
+</head>
+<body>
+<h2>회원 정보 입력</h2>
+<form action="/sign-in" th:action th:object="${userSigninDto}" method="post">
+    <div>
+        <label for="email">이메일<br>
+            <input type="text" id="email" th:field="*{email}" th:value="${userSigninDto.email}">
+        </label>
+    </div>
+    <div>
+        <label for="password">비밀번호<br>
+            <input type="password" id="password" th:field="*{password}" th:value="${userSigninDto.password}">
+        </label>
+    </div>
+
+    <input type="submit" value="sign in"/>
+</form>
+
+<button onclick="location.href='/'">go home</button>
+
+</body>
+</html>

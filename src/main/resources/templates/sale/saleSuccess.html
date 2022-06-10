@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>제품 판매 완료</title>
+</head>
+<body>
+<h1>제품 판매 완료</h1>
+<h2>제품 판매 정보 출력</h2>
+
+<ul>
+    <li>
+        판매 아이디: <span th:text="${saleDto.id}"></span><br/>
+    </li>
+    <li>
+        판매 제품 수량: <span th:text="${saleDto.saleQuantity}"></span><br/>
+    </li>
+    <li>
+        제품 판매 날짜: <span th:text="${saleDto.saleDateTime}"></span><br/>
+    </li>
+    <li>
+        판매 제폼 아이디: <span th:text="${saleDto.productId}"></span><br/>
+    </li>
+    <li>
+        판매한 직원 아이디: <span th:text="${saleDto.userId}"></span><br/>
+    </li>
+    <li>
+        판매한 제품 이름: <span th:text="${saleDto.productName}"></span><br/>
+    </li>
+    <li>
+        판매한 제품 가격: <span th:text="${saleDto.productPrice}"></span><br/>
+    </li>
+    <li>
+        판매한 직원 이름: <span th:text="${saleDto.userName}"></span><br/>
+    </li>
+</ul>
+
+<h3>총 결제 금액</h3>
+<ul>
+    <li>
+        총 결제 금액: <span th:text="${totalPrice}"></span>
+    </li>
+</ul>
+
+<button onclick="location.href='/'">go home</button>
+</body>
+</html>

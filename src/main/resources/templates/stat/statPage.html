@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<div>
+    <h1>Stat Page</h1>
+
+    <p>통계 기능</p>
+    <ul>
+        <li>
+            <span>판매량</span>
+            <ul>
+                <li>
+                    <a href="/stat/count?duration=date">하루</a>
+                </li>
+                <li>
+                    <a href="/stat/count?duration=week">일주일</a>
+                </li>
+                <li>
+                    <a href="/stat/count?duration=month">한달</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span>매출액</span>
+            <ul>
+                <li>
+                    <a href="/stat/income?duration=date">하루</a>
+                </li>
+                <li>
+                    <a href="/stat/income?duration=week">일주일</a>
+                </li>
+                <li>
+                    <a href="/stat/income?duration=month">한달</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span>최다 판매 제품</span>
+            <ul>
+                <li>
+                    <a href="/stat/product?duration=date">하루</a>
+                </li>
+                <li>
+                    <a href="/stat/product?duration=week">일주일</a>
+                </li>
+                <li>
+                    <a href="/stat/product?duration=month">한달</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <button onclick="location.href='/'">go home</button>
+
+</div>
+</body>
+</html>

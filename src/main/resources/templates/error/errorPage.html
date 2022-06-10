@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>에러</title>
+</head>
+<body>
+<h2>에러 내용 출력</h2>
+<p th:text="${error}"></p>
+
+<button onclick="location.href='/'">go home</button>
+
+<div th:if="${error == 'login 하지 않았습니다.'}">
+    <button onclick="location.href='/sign-in'">go login</button>
+</div>
+</body>
+</html>

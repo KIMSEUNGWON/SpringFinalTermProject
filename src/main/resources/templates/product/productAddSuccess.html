@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>제품 등록 완료</title>
+</head>
+<body>
+<h1>제품 등록 완료</h1>
+<h2>제품 등록 정보 출력</h2>
+
+<p>
+    제품 아이디: <span th:text="${productDto.id}"></span><br/>
+    제품 코드: <span th:text="${productDto.code}"></span><br/>
+    제품 가격: <span th:text="${productDto.price}"></span><br/>
+    제품 이름: <span th:text="${productDto.name}"></span><br/>
+</p>
+
+<button onclick="location.href='/'">go home</button>
+</body>
+</html>

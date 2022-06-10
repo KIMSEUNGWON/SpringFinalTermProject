@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>최다 판매 제품 조회 완료</title>
+</head>
+<body>
+<h1 th:text="|${duration} 최다 판매 제품 조회 완료|">최다 판매 제품 조회 완료</h1>
+<h2 th:text="|${duration} 최다 판매 제품 조회|">최다 판매 제품 조회</h2>
+
+<table border="1">
+    <tr>
+        <th>index</th>
+        <th>최다 판매 제품 이름</th>
+        <th>최다 판메 제품 개수</th>
+    </tr>
+    <tr th:each="topSellingProduct, topSellingProductStat: ${topSellingProductList}">
+        <td th:text="${topSellingProductStat.count}">count</td>
+        <td th:text="${topSellingProduct.productName}">productName</td>
+        <td th:text="${topSellingProduct.totalSellingQuantity}">totalSellingQuantity</td>
+    </tr>
+</table>
+
+<button onclick="location.href='/'">go home</button>
+
+<button onclick="location.href='/stat'">go stat page</button>
+</body>
+</html>

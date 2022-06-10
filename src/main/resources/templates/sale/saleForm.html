@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>제품 판매 폼</title>
+</head>
+<body>
+<h2>제품 코드 및 판매 수량 입력</h2>
+<form action="/sale" th:action th:object="${saleCreateDto}" method="post">
+
+    <div>
+        <label for="saleQuantity">수량<br>
+            <input type="text" id="saleQuantity" th:field="*{saleQuantity}" th:value="${saleCreateDto.saleQuantity}">
+        </label>
+    </div>
+
+    <div>
+        <div>모든 제품</div>
+        <select th:field="*{productCode}">
+            <option value="">제품 선택</option>
+            <option th:each="stock : ${allStock}" th:value="${stock.productCode}"
+                    th:text="${stock.productName}">PRODUCT NAME</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="userName">판매하는 직원 이름<br>
+            <input type="text" id="userName" th:value="${user.name}" disabled>
+        </label>
+    </div>
+
+    <input type="submit" value="sale"/>
+</form>
+
+<button onclick="location.href='/'">go home</button>
+
+</body>
+</html>

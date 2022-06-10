@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<div>
+    <h1>Home</h1>
+
+    <div th:if="${user == null}">
+        <p>회원 기능</p>
+        <ul>
+            <li>
+                <a href="/sign-up">회원가입</a>
+            </li>
+            <li>
+                <a href="/sign-in">로그인</a>
+            </li>
+        </ul>
+    </div>
+
+    <div th:if="${user}">
+        <p>상품 등록 기능</p>
+        <ul>
+            <li>
+                <a href="/product/add">상품 등록</a>
+            </li>
+        </ul>
+
+
+        <p>입고 기능</p>
+        <ul>
+            <li>
+                <a href="/stock-in">상품 입고</a>
+            </li>
+        </ul>
+
+        <p>판매 기능</p>
+        <ul>
+            <li>
+                <a href="/sale">상품 판매</a>
+            </li>
+        </ul>
+
+        <p>통계 기능</p>
+        <ul>
+            <li>
+                <a href="/stat">상품 통계</a>
+            </li>
+        </ul>
+
+        <p>로그아웃 기능</p>
+        <ul>
+            <li>
+                <form action="/sign-out" method="post">
+                    <input type="submit" value="logout" />
+                </form>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

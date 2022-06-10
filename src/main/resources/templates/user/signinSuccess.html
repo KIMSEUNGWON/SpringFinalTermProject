@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>로그인 완료</title>
+</head>
+<body>
+<h1>로그인 완료</h1>
+<h2>회원 정보 출력</h2>
+
+<p>
+    이메일: <span th:text="${userDto.email}"></span><br/>
+    이름: <span th:text="${userDto.name}"></span><br/>
+    역할: <span th:text="${userDto.userRole}"></span><br/>
+    가입시간: <span th:text="${userDto.registerDateTime}"></span><br/>
+</p>
+
+<button onclick="location.href='/'">go home</button>
+</body>
+</html>
